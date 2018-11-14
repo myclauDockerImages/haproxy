@@ -19,3 +19,8 @@ To read the Dockerfile of the haproxy base image and its docker-entrypoint.sh
 2. allow you pass environment variable `HAPROXY_CONFIG_STRING` to override the default config, so that not need to mount just change the docker-compose or kubernetes yaml and restart the service its will work 
 3. for how to use mutiple lines environment you can reference from ./docker-compose.yml
 
+# To test locally or debug
+1. git clone
+2. RUN `docker build --tag custom-haproxy .` to build image
+3. RUN `docker compose up -d` to start (you can change port before it)
+4. RUN `docker ps`  to check if it is running

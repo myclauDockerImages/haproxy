@@ -2,6 +2,8 @@ version: '2'
 services:
   haproxy:
     image: "custom-haproxy"
+    ports:
+     - 8080:80
     environment:
       HAPROXY_CONFIG_STRING: |-
         global
@@ -41,4 +43,3 @@ services:
           #errorfile 502 /etc/haproxy/errors/502.http
           #errorfile 503 /etc/haproxy/errors/503.http
           #errorfile 504 /etc/haproxy/errors/504.http
-      Tmp_config: "ok"
