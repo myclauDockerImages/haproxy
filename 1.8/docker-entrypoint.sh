@@ -4,6 +4,13 @@ if [ "${HAPROXY_CONFIG_STRING}" != "$null" ]; then
  echo "${HAPROXY_CONFIG_STRING}" > /usr/local/etc/haproxy/haproxy.cfg
 fi
 
+readonly RSYSLOG_PID="/var/run/rsyslogd.pid"
+rm -f $RSYSLOG_PID
+rsyslogd -n
+
+
+
+
 # first arg is `-f` or `--some-option`
 if [ "${1#-}" != "$1" ]; then
 	set -- haproxy "$@"
