@@ -6,7 +6,7 @@ fi
 
 readonly RSYSLOG_PID="/var/run/rsyslogd.pid"
 rm -f $RSYSLOG_PID
-rsyslogd -n
+rsyslogd
 
 
 
