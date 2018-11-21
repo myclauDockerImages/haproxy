@@ -41,7 +41,7 @@ ref: https://www.loggly.com/docs/docker-syslog/
 4. RUN `docker ps`  to check if it is running
 
 
-# HaConfig
+# HaConfig (Can use HAPROXY_CONFIG_STRING to override)
 
 Should be something like this
 ```
